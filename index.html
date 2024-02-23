@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./pic/FB_IMG_1675447938315.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image upload</title>
+    <link rel="stylesheet" href="/IMAGE UPLOAD/style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="card">
+            <h1> <span> Nkeng </span>Danilo.</h1>
+            <p>@nkengafacdanilo</p>
+            <img src="./pic/icons8_male_user.ico" width="50%" alt="" id="profile-pic">
+            <label for="input-file">update image</label>
+            <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+        </div>
+    </div> 
+</body>
+<script>
+let profilePic = document.getElementById("profile-pic");
+let inputFile = document.getElementById("input-file");
+
+inputFile.onchange = function(){
+    profilePic.src = URL.createObjectURL(inputFile.files[0]);
+}
+</script>
+</html>
